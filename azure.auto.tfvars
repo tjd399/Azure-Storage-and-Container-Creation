@@ -1,8 +1,8 @@
 # storage account name
-storage_account_name = "teststoragetjd399"
+storage_account_name = "testtjd399"
 
 # container name
-container_name = "testcontainer"
+container_name = "blobtestcontainer"
 
 # container access type
 container_access_type = "private"
