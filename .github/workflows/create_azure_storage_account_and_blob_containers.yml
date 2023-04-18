@@ -32,10 +32,10 @@ jobs:
       #  with:
        #   creds: ${{ secrets.AZURE_CREDENTIALS }}
       
-      - name: Create Azure Resources
-        run: |
-          cd terraform
-          terraform apply 
+     # - name: Create Azure Resources
+      #  run: |
+       #   cd terraform
+        #  terraform apply 
       
       - name: Terraform Apply
         run: terraform apply 
