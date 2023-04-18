@@ -27,10 +27,10 @@ jobs:
         id: terraform_plan
         run: terraform plan -var-file=azure.auto.tfvars
       
-      - name: Azure Login
+     # - name: Azure Login
        # uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      #  with:
+       #   creds: ${{ secrets.AZURE_CREDENTIALS }}
       
       - name: Create Azure Resources
         run: |
