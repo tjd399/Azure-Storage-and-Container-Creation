@@ -1,1 +1,1 @@
-# Azure-Storage-and-Container-Creation
+Creating a azure storage account and container name.
