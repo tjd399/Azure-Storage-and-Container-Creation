@@ -1,8 +1,8 @@
 # storage account name
-storage_account_name = "tdavisstorage2"
+storage_account_name = "teststorage"
 
 # container name
-container_name = "tdavistestcontainer2"
+container_name = "testcontainer"
 
 # container access type
 container_access_type = "private"
