@@ -27,7 +27,7 @@ resource "azurerm_storage_account" "example" {
   tags = {
     environment = "dev"
   }
-  resource_group_name       = data.azurerm_resource_group.example.name
+ # resource_group_name       = data.azurerm_resource_group.example.name
  # depends_on = [data.azurerm_resource_group.example]
 }
 
