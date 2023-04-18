@@ -37,5 +37,5 @@ jobs:
        #   cd terraform
         #  terraform apply 
       
-      - name: Terraform Apply
-        run: terraform apply 
+      #- name: Terraform Apply
+       # run: terraform apply 
