@@ -20,13 +20,13 @@ account_tier = "Standard"
 account_replication_type = "ZRS"
 
 # subscription id
-subscription_id = "f071dfb2-8ec1-4527-a384-2f4939ce0113"
+#subscription_id = "f071dfb2-8ec1-4527-a384-2f4939ce0113"
 
 # client id
-client_id = "fd542cdf-a896-44e1-871d-99007818b6fb"
+#client_id = "fd542cdf-a896-44e1-871d-99007818b6fb"
 
 # client secret
-client_secret = "kqA8Q~vWmt1CckHi~5hp.j0zrxT3Nw-JhTa9eauL"
+#client_secret = "kqA8Q~vWmt1CckHi~5hp.j0zrxT3Nw-JhTa9eauL"
 
 # tenant id
-tenant_id = "44b79a67-d972-49ba-9167-8eb05f754a1a"
+#tenant_id = "44b79a67-d972-49ba-9167-8eb05f754a1a"
