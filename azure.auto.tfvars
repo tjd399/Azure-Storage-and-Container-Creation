@@ -1,5 +1,5 @@
 # storage account name
-storage_account_name = "teststorage"
+storage_account_name = "teststoragetjd399"
 
 # container name
 container_name = "testcontainer"
