@@ -6,11 +6,6 @@ provider "azurerm" {
   tenant_id       = var.tenant_id
 }
 
-provider "azurerm" {
-  # ...
-  features {}
-  # ...
-}
 
 # Check if the resource group already exists, else create it
 data "azurerm_resource_group" "example" {
