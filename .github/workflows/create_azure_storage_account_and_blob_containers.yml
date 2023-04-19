@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - main
-
+inputs:
+        subscription_id:
+        description: 'subscription_id: Azure subscription ID.'
+        required: true
 jobs:
   terraform:
     runs-on: ubuntu-latest
