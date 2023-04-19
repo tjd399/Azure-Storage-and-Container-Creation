@@ -20,7 +20,7 @@ account_tier = "Standard"
 account_replication_type = "ZRS"
 
  #subscription id
-subscription_id = "f071dfb2-8ec1-4527-a384-2f4939ce0113"
+#subscription_id = "f071dfb2-8ec1-4527-a384-2f4939ce0113"
 
 # client id
 #client_id = "fd542cdf-a896-44e1-871d-99007818b6fb"
