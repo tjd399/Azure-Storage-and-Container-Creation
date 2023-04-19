@@ -8,7 +8,7 @@ container_name = "blobtestcontainerone"
 container_access_type = "private"
 
 # resource group
-resource_group_name = "dev-shared-aks"
+resource_group_name = "tjd399-rg"
 
 # location
 location = "eastus2"
