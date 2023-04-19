@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - main
-inputs:
+    workflow_dispatch:
+      inputs:
         subscription_id:
         description: 'subscription_id: Azure subscription ID.'
         required: true
