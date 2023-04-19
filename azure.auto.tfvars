@@ -19,4 +19,4 @@ account_tier = "Standard"
 # account replication
 account_replication_type = "ZRS"
 
-subscription_id = "c17137a4-ecb2-48fe-8c4f-3a597bdcceaf"
+
