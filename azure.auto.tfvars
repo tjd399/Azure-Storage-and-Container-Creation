@@ -1,5 +1,5 @@
 # storage account name
-storage_account_name = "testtjd399one"
+storage_account_name = "testtjd399two"
 
 # container name
 container_name = "blobtestcontainerone"
