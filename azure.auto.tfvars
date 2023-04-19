@@ -2,7 +2,7 @@
 storage_account_name = "testtjd399"
 
 # container name
-container_name = "blobtestcontainer"
+container_name = "blobtestcontainerone"
 
 # container access type
 container_access_type = "private"
