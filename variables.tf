@@ -64,3 +64,8 @@ variable "tenant_id" {
   default = ""
 }
 
+# Define input variables
+variable "subscription_id" {}
+variable "client_id" {}
+variable "client_secret" {}
+variable "tenant_id" {}
