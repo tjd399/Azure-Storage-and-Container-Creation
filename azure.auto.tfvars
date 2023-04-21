@@ -8,7 +8,7 @@ container_name = "blobtestcontainerone"
 container_access_type = "private"
 
 # resource group
-resource_group_name = "tdavis-test-rg"
+resource_group_name = "tdavis-rg"
 
 # location
 location = "eastus2"
