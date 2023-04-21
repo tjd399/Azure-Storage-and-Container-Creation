@@ -1,5 +1,5 @@
 # storage account name
-storage_account_name = "testtjd399two"
+storage_account_name = "testtjd399three"
 
 # container name
 container_name = "blobtestcontainerone"
@@ -8,7 +8,7 @@ container_name = "blobtestcontainerone"
 container_access_type = "private"
 
 # resource group
-resource_group_name = "tjd399-rg"
+resource_group_name = "tdavis-test-rg"
 
 # location
 location = "eastus2"
