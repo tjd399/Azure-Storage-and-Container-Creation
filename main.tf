@@ -8,15 +8,14 @@ provider "azurerm" {
 }
 
 # Check if the resource group already exists, else create it
-
-
 resource "azurerm_resource_group" "resource_group" {
   name     = var.resource_group_name
   location = var.location
-} 
+
  lifecycle {
   ignore_changes = [tags]
  }
+}
 
 data "azurerm_resource_group" "resource_group" {
  name = var.resource_group_name
