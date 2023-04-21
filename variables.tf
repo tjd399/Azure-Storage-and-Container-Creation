@@ -44,7 +44,6 @@ variable "account_replication_type" {
 variable "subscription_id" {
   description = "Subscription ID for Azure account"
   type = string
-  default = ""
 }
 
 variable "client_id" {
