@@ -8,9 +8,9 @@ provider "azurerm" {
 }
 
 # Check if the resource group already exists, else create it
-data "azurerm_resource_group" "resource_group" {
- name = var.resource_group_name
-}
+#data "azurerm_resource_group" "resource_group" {
+ #name = var.resource_group_name
+#}
 
 resource "azurerm_resource_group" "resource_group" {
   name     = var.resource_group_name
@@ -32,7 +32,7 @@ resource "azurerm_storage_account" "storage" {
   tags = {
     environment = "dev"
   }
-  resource_group_name       = data.azurerm_resource_group.resource_group.name
+  resource_group_name       = azurerm_resource_group.resource_group.name
  # depends_on = [data.azurerm_resource_group.example]
 }
 
