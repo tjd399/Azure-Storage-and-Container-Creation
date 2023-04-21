@@ -10,15 +10,15 @@ provider "azurerm" {
 # Check if the resource group already exists, else create it
 data "azurerm_resource_group" "resource_group" {
  name = var.resource_group_name
- lifecycle {
-  ignore_changes = [tags]
- }
 }
 
 resource "azurerm_resource_group" "resource_group" {
   name     = var.resource_group_name
   location = var.location
 } 
+ lifecycle {
+  ignore_changes = [tags]
+ }
 
 
 # Create the storage account and container only if the resource group does not exist
