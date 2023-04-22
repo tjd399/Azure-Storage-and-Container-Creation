@@ -1,53 +1,50 @@
 name: Create Azure Storage Account and Blob Container
 
 on:
-  push:
-    branches:
-      - main
-    workflow_dispatch:
-      inputs:
-        subscription_id:
-        description: 'subscription_id: Azure subscription ID.'
-        required: true
-jobs:
-  terraform:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout repo
-        uses: actions/checkout@v2
+   workflow_dispatch:
+  #push:
+    #branches:
+     # - main
+
+   jobs:
+   terraform:
+     runs-on: ubuntu-latest
+     steps:
+       - name: checkout repo
+         uses: actions/checkout@v2
 
 
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v1
-        with:
-          terraform_version: 1.0.0
+       - name: Setup Terraform
+         uses: hashicorp/setup-terraform@v1
+         with:
+           terraform_version: 1.0.0
 
-      - name: Azure Login
-        uses: azure/login@v1
-        with:
-          creds: ${{secrets.AZURE_CREDENTIALS}}
+       - name: Azure Login
+         uses: azure/login@v1
+         with:
+           creds: ${{secrets.AZURE_CREDENTIALS}}
       
-      - name: Terraform Init
-        run: terraform init
+       - name: Terraform Init
+         run: terraform init
       
-      - name: Terraform Workspace Select
-        if: env.WORKSPACE != 'default'
-        run: terraform workspace select $WORKSPACE || true
+       - name: Terraform Workspace Select
+         if: env.WORKSPACE != 'default'
+         run: terraform workspace select $WORKSPACE || true
       
-      - name: Terraform Plan
-        id: terraform_plan
-        run: terraform plan -var-file=azure.auto.tfvars
+       - name: Terraform Plan
+         id: terraform_plan
+         run: terraform plan -var-file=azure.auto.tfvars
         
       
-     # - name: Azure Login
-       # uses: azure/login@v1
-      #  with:
-       #   creds: ${{ secrets.AZURE_CREDENTIALS }}
+       - name: Azure Login
+         uses: azure/login@v1
+         with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
       
      # - name: Create Azure Resources
       #  run: |
        #   cd terraform
         #  terraform apply 
       
-      #- name: Terraform Apply
-       # run: terraform apply 
+       - name: Terraform Apply
+         run: terraform apply 
