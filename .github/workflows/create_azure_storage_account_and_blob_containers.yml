@@ -1,50 +1,61 @@
 name: Create Azure Storage Account and Blob Container
 
 on:
-   workflow_dispatch:
-  #push:
-    #branches:
-     # - main
+  workflow_dispatch:
+  push:
+    branches:
+      - main
 
-   jobs:
-   terraform:
-     runs-on: ubuntu-latest
-     steps:
-       - name: checkout repo
-         uses: actions/checkout@v2
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: checkout repo
+        uses: actions/checkout@v2
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 1.0.0
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Workspace Select
+        if: env.WORKSPACE != 'default'
+        run: terraform workspace select $WORKSPACE || true
+
+      - name: Terraform Plan
+        id: terraform_plan
+        run: terraform plan -var-file=azure.auto.tfvars
+
+    
+      - name: Create Azure Resources
+        run: |
+          cd terraform
+          terraform apply 
+
+      - name: Terraform Apply
+        run: terraform apply 
 
 
-       - name: Setup Terraform
-         uses: hashicorp/setup-terraform@v1
-         with:
-           terraform_version: 1.0.0
 
-       - name: Azure Login
-         uses: azure/login@v1
-         with:
-           creds: ${{secrets.AZURE_CREDENTIALS}}
-      
-       - name: Terraform Init
-         run: terraform init
-      
-       - name: Terraform Workspace Select
-         if: env.WORKSPACE != 'default'
-         run: terraform workspace select $WORKSPACE || true
-      
-       - name: Terraform Plan
-         id: terraform_plan
-         run: terraform plan -var-file=azure.auto.tfvars
-        
-      
-       - name: Azure Login
-         uses: azure/login@v1
-         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-      
-     # - name: Create Azure Resources
-      #  run: |
-       #   cd terraform
-        #  terraform apply 
-      
-       - name: Terraform Apply
-         run: terraform apply 
+
+
+
+
+
+
+
+
+
+
+
+
+
