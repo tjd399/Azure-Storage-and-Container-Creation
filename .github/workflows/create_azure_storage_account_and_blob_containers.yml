@@ -2,9 +2,13 @@ name: Create Azure Storage Account and Blob Container
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
+  inputs: 
+        subscription_id:
+        description: 'subscription_id: Azure subscription ID.'
+        required: true
+  # push:
+  #   branches:
+  #     - main
 
 jobs:
   terraform:
@@ -14,7 +18,7 @@ jobs:
       - name: Azure Login
         uses: azure/login@v1
         with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: checkout repo
         uses: actions/checkout@v2
@@ -35,10 +39,12 @@ jobs:
         id: terraform_plan
         run: terraform plan -var-file=azure.auto.tfvars
 
-    
-      # - name: Create Azure Resources
-      #   run: |
-      #     cd terraform
-      #     terraform apply 
+      - name: Create Azure Resources
+        run: |
+          cd terraform
+          terraform apply 
 
       - name: Terraform Apply
+        run: |
+          cd terraform 
+          terraform apply
