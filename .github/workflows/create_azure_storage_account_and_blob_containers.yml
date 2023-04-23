@@ -14,11 +14,15 @@ jobs:
   terraform:
     runs-on: ubuntu-latest
     steps:
-
+      
+      - name: Verify az installation
+        run: az --version
+        
       - name: Azure Login
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
+          enable-AzPSSession: true
 
       - name: checkout repo
         uses: actions/checkout@v2
