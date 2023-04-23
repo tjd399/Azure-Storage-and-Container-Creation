@@ -10,40 +10,55 @@ on:
     branches:
       - main
 
-jobs:
-  terraform:
-    runs-on: ubuntu-latest
-    steps:
 
-      - name: checkout repo
-        uses: actions/checkout@v2
+  jobs:
+   terraform-apply:
+     runs-on: ubuntu-latest
+   steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Set up Terraform CLI
+      uses: hashicorp/setup-terraform@v1
+      with:
+        cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+    - name: Terraform init
+      run: terraform init
+    - name: Terraform apply
 
-      - name: Azure Login
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+# jobs:
+#   terraform:
+#     runs-on: ubuntu-latest
+#     steps:
 
-      - name: Set Azure Subscription
-        uses: azure/CLI@v1
-        with:
-          inlineScript: 'az account set --subscription ${{ github.event.inputs.subscription_id }}'
+#       - name: checkout repo
+#         uses: actions/checkout@v2
 
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v1
-        with:
-          terraform_version: 1.0.0
+#       - name: Azure Login
+#         uses: azure/login@v1
+#         with:
+#           creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+#       - name: Set Azure Subscription
+#         uses: azure/CLI@v1
+#         with:
+#           inlineScript: 'az account set --subscription ${{ github.event.inputs.subscription_id }}'
+
+#       - name: Setup Terraform
+#         uses: hashicorp/setup-terraform@v1
+#         with:
+#           terraform_version: 1.0.0
       
-      - name: Terraform Init
-        run: terraform init
+#       - name: Terraform Init
+#         run: terraform init
 
-      - name: Terraform Plan
-        id: terraform_plan
-        run: terraform plan
+#       - name: Terraform Plan
+#         id: terraform_plan
+#         run: terraform plan
       
-     # - name: Create Azure Resources
-      #  run: |
-       #   cd terraform
-        #  terraform apply 
+#      # - name: Create Azure Resources
+#       #  run: |
+#        #   cd terraform
+#         #  terraform apply 
       
-     # - name: Terraform Apply
-      #   run: terraform apply 
+#      # - name: Terraform Apply
+#       #   run: terraform apply 
