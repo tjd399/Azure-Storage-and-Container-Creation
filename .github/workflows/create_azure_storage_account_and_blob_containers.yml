@@ -2,10 +2,10 @@ name: Create Azure Storage Account and Blob Container
 
 on:
   workflow_dispatch:
-  inputs: 
+    inputs: 
         subscription_id:
-        description: 'subscription_id: Azure subscription ID.'
-        required: true
+         description: 'Azure subscription ID.'
+         required: true
   # push:
   #   branches:
   #     - main
