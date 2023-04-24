@@ -1,9 +1,8 @@
 terraform {
-  cloud {
     organization = "sherwin-williams"
     workspaces { name = "Azure-Storage-and-Container-Creation" }
   }
-}
+
 
 provider "azurerm" {
   features {}
