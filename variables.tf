@@ -46,18 +46,18 @@ variable "subscription_id" {
   type = string
 }
 
-variable "client_id" {
+variable "AZURE_CLIENT_ID" {
   description = "Client ID for Azure account"
   default = ""
 }
 
-variable "client_secret" {
+variable "AZURE_CREDENTIALS" {
   description = "Client Secret for Azure account"
   type = string
   default = ""
 }
 
-variable "tenant_id" {
+variable "AZURE_TENANT_ID" {
   description = "Tenant ID for Azure account"
   type = string
   default = ""
