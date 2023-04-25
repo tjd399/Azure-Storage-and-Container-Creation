@@ -1,4 +1,4 @@
-name: Create Azure Storage Account and Blob Container
+
 
 on:
   workflow_dispatch:
