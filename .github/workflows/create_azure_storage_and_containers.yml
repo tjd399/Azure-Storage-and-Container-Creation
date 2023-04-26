@@ -11,11 +11,13 @@ jobs:
   terraform:
     runs-on: ubuntu-latest
     steps:
+
+    run:
       - name: checkout code
         uses: actions/checkout@v1
 
       - name: Azure Login
-        uses: azure/login@v1
+        uses: azure/login@v1.6.0
         with:
          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
