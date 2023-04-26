@@ -11,19 +11,14 @@ jobs:
   terraform:
     runs-on: ubuntu-latest
     steps:
-      run:
       - name: checkout code
         uses: actions/checkout@v1
-     # - name:  Create Azure Storage Account and Blob Container 
-
 
       - name: Azure Login
         uses: azure/login@v1
         with:
          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-
-      
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         with:
