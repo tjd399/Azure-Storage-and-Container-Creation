@@ -11,11 +11,11 @@ jobs:
   terraform:
     runs-on: ubuntu-latest
     steps:
-
+      run:
       - name: checkout code
         uses: actions/checkout@v1
-      - name:  Create Azure Storage Account and Blob Container 
-?
+     # - name:  Create Azure Storage Account and Blob Container 
+
 
       - name: Azure Login
         uses: azure/login@v1
