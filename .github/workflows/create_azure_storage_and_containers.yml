@@ -11,13 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+      - name: checkout code
+        uses: actions/checkout@v1
+
       - name: Azure Login
         uses: az Login
         with:
          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: checkout code
-        uses: actions/checkout@v2
+
       
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
