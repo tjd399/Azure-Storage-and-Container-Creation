@@ -3,6 +3,7 @@ name: Create Azure Storage Account and Blob Container
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:   
 
 jobs:
   terraform:
