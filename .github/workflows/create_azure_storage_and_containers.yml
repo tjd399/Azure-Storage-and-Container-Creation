@@ -1,5 +1,7 @@
 name: Create Azure Storage Account and Blob Container
-uses: tjd399/Azure-Storage-and-Container-Creation@main
+
+run:
+    uses: tjd399/Azure-Storage-and-Container-Creation@main
 
 on:
   workflow_dispatch:
