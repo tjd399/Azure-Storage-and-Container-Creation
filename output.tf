@@ -9,6 +9,6 @@ output "storage_account_connection_string" {
 
 output "storage_container_name" {
 #  count = length(var.resource_groups)
-  value = azurerm_storage_container.storage_container.name
+  value = azurerm_storage_container.storage_container[each.key]
 }
 
