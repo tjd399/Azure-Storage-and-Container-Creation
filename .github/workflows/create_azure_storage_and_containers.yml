@@ -1,0 +1,32 @@
+name: Create Azure Storage Account and Blob Container
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:   
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    name: Apply Terraform
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        allow-no-subscriptions: true
+
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v1
+      with:
+        cli_config_credentials_token: ${{ secrets.TERRAFORM_CLOUD_API_TOKEN }}
+
+
+    - name: Terraform Init
+      run: terraform init
+
+    - name: Terraform plan
+      run: terraform plan
