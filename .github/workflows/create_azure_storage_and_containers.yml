@@ -24,8 +24,8 @@ jobs:
       with:
         cli_config_credentials_token: ${{ secrets.TERRAFORM_CLOUD_API_TOKEN }}
 
-    - name: Configure AzureRM Provider
-      run: echo "ARM_ACCESS_KEY=${{ secrets.ARM_ACCESS_KEY }}" >> $GITHUB_ENV
+   # - name: Configure AzureRM Provider
+    #  run: echo "ARM_ACCESS_KEY=${{ secrets.ARM_ACCESS_KEY }}" >> $GITHUB_ENV
 
     - name: Terraform Init
       run: terraform init
