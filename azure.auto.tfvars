@@ -1,8 +1,8 @@
 # storage account name
-storage_account_name = "k8sveleronpbackup"
+storage_account_name = "k8sveleronpbackup12"
 
 # container name
-container_name = "k8svelerocontainer"
+container_name = "k8svelerocontainer12"
 
 # container access type
 container_access_type = "private"
