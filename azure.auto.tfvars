@@ -2,7 +2,7 @@
 storage_account_name = "k8sveleronpbackup"
 
 # container name
-container_name = "k8svelerocontainer"
+container_name = ["k8svelerocontainer", "k8svelerocontainer2"]
 
 # container access type
 container_access_type = "private"

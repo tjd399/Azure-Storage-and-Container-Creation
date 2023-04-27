@@ -38,7 +38,8 @@ resource "azurerm_storage_account" "storage" {
 
 # Create a container inside the storage account
 resource "azurerm_storage_container" "storage_container" {
-  name                  = var.container_name
+  for_each = toset(var.container_name)
+  name                  = each.value
   storage_account_name  = azurerm_storage_account.storage.name
   container_access_type = var.container_access_type
   depends_on =  [azurerm_storage_account.storage]
