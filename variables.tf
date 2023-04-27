@@ -8,7 +8,7 @@ variable "storage_account_name" {
 variable "container_name" {
   description = "Name of the storage container."
   type = list 
-  default = ""
+  default = []
 }
 
 variable "container_access_type" {
