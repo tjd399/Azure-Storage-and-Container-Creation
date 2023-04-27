@@ -1,14 +1,14 @@
 # storage account name
-storage_account_name = "k8sveleronpbackup12"
+storage_account_name = "k8sveleronpbackup"
 
 # container name
-container_name = "k8svelerocontainer12"
+container_name = "k8svelerocontainer"
 
 # container access type
 container_access_type = "private"
 
 # resource group
-resource_group_name = "np-velero-k8s-rg"
+resource_group_name = "velero-k8s-rg"
 
 # location
 location = "eastus2"
