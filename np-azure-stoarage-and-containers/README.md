@@ -1,1 +1,0 @@
-Creating a azure storage account and container name.
