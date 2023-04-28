@@ -9,6 +9,7 @@ jobs:
   terraform:
     runs-on: ubuntu-latest
     name: Apply Terraform
+    working-directory: ./np-azure-storage-and-containers
     steps:
     - name: Checkout
       uses: actions/checkout@v2
