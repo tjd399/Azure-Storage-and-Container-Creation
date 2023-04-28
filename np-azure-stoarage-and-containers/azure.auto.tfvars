@@ -1,8 +1,8 @@
 # storage account name
-storage_account_name = "testnpk8sveleronpbackup1"
+storage_account_name = "testnpk8sveleronpbackup"
 
 # container name
-container_name = ["npk8svelerocontainer", "npk8svelerocontainer2"]
+container_name = ["npk8svelerocontainer", "npk8svelerocontainer"]
 
 # container access type
 container_access_type = "private"
