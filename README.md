@@ -10,9 +10,10 @@ This setup provisions an Azure Resource Group, Storage Account, and Container to
 
 Step: 
 
-1. Access the Azure-Storage-and-Container-Creation repo. 
-2. Click on azure.auto.tfvars. 
-3. Add the following content to the following 
+1. Make sure that the Service Principle has been assigned to the Subscritpion you will create the storage account and containers. If this step has been completed already, skip to step 2. 
+2. Access the Azure-Storage-and-Container-Creation repo. 
+3. Click on azure.auto.tfvars. 
+4. Add the following content to the following 
  
  Subscription ID:
  Resource Group:
@@ -20,6 +21,8 @@ Step:
  Location: (Must be the same as subscription)
  Tier: 
 
- 4. Once completed, push to the repo. 
+ 5. Once completed, push to the repo. 
+
+ 
 
 
