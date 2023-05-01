@@ -10,7 +10,7 @@ This setup provisions an Azure Resource Group, Storage Account, and Container to
 
 Step: 
 
-1. Make sure that the Service Principle has been assigned to the Subscritpion you will create the storage account and containers. If this step has been completed already, skip to step 2. 
+1. Before creating the Azure resources, you must a assign "sp-azure_storage_and_container" Service Principle to the Subscription that you are planning to use. If you have already completed this step, you can move on to step 2 without any further action. 
 2. Access the Azure-Storage-and-Container-Creation repo. 
 3. Click on azure.auto.tfvars. 
 4. Add the following content to the following 
