@@ -1,9 +1,4 @@
 terraform {
-  backend "remote" {
-    organization = "comp-name"
-
-  } 
-  
    required_providers {
      azurerm = {
       source = "hashicorp/azurerm"
@@ -24,6 +19,7 @@ provider "azurerm" {
 
 backend "remote" {
   workspaces {
+    organization = "sherwin-williams"
     name = "sw-tf-k8s-Azure-Storage-and-Container-Creation"
   }
   workspaces {
