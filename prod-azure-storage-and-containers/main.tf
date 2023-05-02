@@ -8,7 +8,6 @@ terraform {
   
     backend "remote" {
     organization = "sherwin-williams"
-
     workspaces {
       name = "sw-tf-k8s-Azure-Storage-and-Container-Creation"
     }
