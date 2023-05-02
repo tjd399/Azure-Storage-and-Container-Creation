@@ -13,8 +13,6 @@ terraform {
       name = "sw-tf-k8s-Azure-Storage-and-Container-Creation"
     }
 
-    /* workspaces {
-      name = "sw-tf-k8s-Azure-Storage-and-Container-Creation-np" */
     }
   }
 
