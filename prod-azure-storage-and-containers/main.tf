@@ -1,8 +1,20 @@
 terraform {
-  required_providers {
-    azurerm = {
+   required_providers {
+     azurerm = {
       source = "hashicorp/azurerm"
       version = ">= 2.77"
+    }
+  }
+  
+    backend "remote" {
+    organization = "sherwin-williams"
+
+    workspaces {
+      name = "sw-tf-k8s-Azure-Storage-and-Container-Creation"
+    }
+
+    workspaces {
+      name = "sw-tf-k8s-Azure-Storage-and-Container-Creation-np"
     }
   }
 }
