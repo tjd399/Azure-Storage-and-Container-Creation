@@ -18,8 +18,8 @@ provider "azurerm" {
 
 
 backend "remote" {
+  organization = "sherwin-williams"
   workspaces {
-    organization = "sherwin-williams"
     name = "sw-tf-k8s-Azure-Storage-and-Container-Creation"
   }
   workspaces {
