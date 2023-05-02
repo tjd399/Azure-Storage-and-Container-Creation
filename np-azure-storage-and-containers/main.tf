@@ -1,4 +1,9 @@
 terraform {
+  backend "remote" {
+    organization = "comp-name"
+
+  } 
+  
    required_providers {
      azurerm = {
       source = "hashicorp/azurerm"
@@ -15,19 +20,16 @@ provider "azurerm" {
   client_secret   = var.AZURE_CREDENTIALS
   tenant_id       = var.AZURE_TENANT_ID  
  }
-    backend "remote" {
-    organization = "sherwin-williams"
-    workspaces {
-      name = "sw-tf-k8s-Azure-Storage-and-Container-Creation"
-    }
-  }
 
-    backend "remote" {
-    organization = "sherwin-williams"
-    workspaces {
-      name = "sw-tf-k8s-Azure-Storage-and-Container-Creation-np"
-    }
+
+backend "remote" {
+  workspaces {
+    name = "sw-tf-k8s-Azure-Storage-and-Container-Creation"
   }
+  workspaces {
+    name = "sw-tf-k8s-Azure-Storage-and-Container-Creation-np"
+  }
+}
 
 
 resource "azurerm_resource_group" "resource_group" {
