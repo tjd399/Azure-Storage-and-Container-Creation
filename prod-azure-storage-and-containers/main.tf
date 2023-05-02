@@ -13,11 +13,11 @@ terraform {
       name = "sw-tf-k8s-Azure-Storage-and-Container-Creation"
     }
 
-    workspaces {
-      name = "sw-tf-k8s-Azure-Storage-and-Container-Creation-np"
+    /* workspaces {
+      name = "sw-tf-k8s-Azure-Storage-and-Container-Creation-np" */
     }
   }
-}
+
 
 provider "azurerm" {
   features {}
