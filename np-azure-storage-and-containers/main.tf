@@ -6,6 +6,15 @@ terraform {
     }
   }
 }
+
+provider "azurerm" {
+  features {}
+
+  subscription_id = var.subscription_id
+  client_id       = var.AZURE_CLIENT_ID
+  client_secret   = var.AZURE_CREDENTIALS
+  tenant_id       = var.AZURE_TENANT_ID  
+ }
     backend "remote" {
     organization = "sherwin-williams"
     workspaces {
@@ -19,17 +28,6 @@ terraform {
       name = "sw-tf-k8s-Azure-Storage-and-Container-Creation-np"
     }
   }
-
-
-
-provider "azurerm" {
-  features {}
-
-  subscription_id = var.subscription_id
-  client_id       = var.AZURE_CLIENT_ID
-  client_secret   = var.AZURE_CREDENTIALS
-  tenant_id       = var.AZURE_TENANT_ID  
- }
 
 
 resource "azurerm_resource_group" "resource_group" {
