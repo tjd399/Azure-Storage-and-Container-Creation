@@ -8,7 +8,7 @@ container_name = ["npk8svelerocontainer", "npk8svelerocontainer2"]
 container_access_type = "private"
 
 # resource group
-resource_group_name = "np-velero-k8s-rg"
+resource_group_name = "test-np-velero-k8s-rg"
 
 # location
 location = "eastus2"
