@@ -1,5 +1,5 @@
 # storage account name
-storage_account_name = "npk8sveleronpbackup"
+storage_account_name = "testnpk8sveleronpbackup"
 
 # container name
 container_name = ["npk8svelerocontainer", "npk8svelerocontainer2"]
