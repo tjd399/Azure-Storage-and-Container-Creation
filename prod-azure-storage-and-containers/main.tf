@@ -9,11 +9,10 @@ terraform {
     backend "remote" {
     organization = "sherwin-williams"
     workspaces {
-      name = "sw-tf-k8s-Azure-Storage-and-Container-Creation"
-    }
-
+      name = "Azure-Storage-and-Container-Creation-np"
     }
   }
+}
 
 
 provider "azurerm" {
@@ -48,6 +47,5 @@ resource "azurerm_storage_container" "storage_container" {
   container_access_type = var.container_access_type
   depends_on =  [azurerm_storage_account.storage]
 }
-
 
   
