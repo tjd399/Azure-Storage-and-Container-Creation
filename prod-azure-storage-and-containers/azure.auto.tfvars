@@ -8,7 +8,7 @@ container_name = ["k8svelerocontainer", "k8svelerocontainer2"]
 container_access_type = "private"
 
 # resource group
-resource_group_name = "velero-k8s-rg"
+resource_group_name = "tjd399-rg"
 
 # location
 location = "eastus2"
